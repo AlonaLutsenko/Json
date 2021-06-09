@@ -1,19 +1,21 @@
 package JSON;
 
 import org.junit.Assert;
+import org.junit.Test;
 
 public class JsonTest {
-//    String websites;
-//    String expectedResult = "Test1";
-//    String expectedResult2 = "DelphiN";
-//
+//    @Test
 //    public void positiveTest() {
-//        websites();
-//        Assert.assertArrayEquals(websites, expectedResult);
+//        String actual1 = ;
+//        String expectedResult = "Test1";
+//        Assert.assertEquals(actual1, expectedResult);
 //    }
 //
+//    @Test
 //    public void negativeTest() {
-//        websites();
-//        Assert.assertArrayEquals(websites, expectedResult2);
+//        String actual2 = ;
+//        String expectedResult2 = "Test2";
+//        Assert.assertNotEquals(actual2, expectedResult2);
+//
 //    }
 }

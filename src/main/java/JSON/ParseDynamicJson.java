@@ -43,31 +43,4 @@ public class ParseDynamicJson {
         }
     }
 
-    public static void main(String[] args) throws IOException, ParseException {
-        JSONParser jsonParser = new JSONParser();
-        FileReader reader = new FileReader("src/main/java/JSON/Json.json");
-
-        Object obj = jsonParser.parse(reader);
-        JSONObject jsonObject = (JSONObject) obj;
-
-        JSONArray websites = (JSONArray) jsonObject.get("websites");
-        JSONObject inputJsonObject = new JSONObject(jsonObject);
-        getKey(jsonObject, "websites");
-
-    }
-
-    @Test
-    public void positiveTest() {
-        String actual1 = ;
-        String expectedResult = "Test1";
-        Assert.assertEquals(actual1, expectedResult);
-    }
-
-    @Test
-    public void negativeTest() {
-        String actual2 = ;
-        String expectedResult2 = "Test2";
-        Assert.assertNotEquals(actual2, expectedResult2);
-
-    }
 }
