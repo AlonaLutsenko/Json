@@ -3,7 +3,7 @@ package JSON;
 import com.jayway.jsonpath.JsonPath;
 import org.testng.Assert;
 
-public class Books {
+public class DmytroImpl {
     String result,result2;
     String expectedResult = "Test1";
     String expectedResult2 = "DelphiN";
