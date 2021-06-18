@@ -1,5 +1,8 @@
-package JSON;
+package JSON.servise;
 
+import JSON.util.JsonHelper;
+import JSON.model.Book;
+import JSON.model.WebSite;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
@@ -8,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import static JSON.JsonHelper.*;
+import static JSON.util.JsonHelper.*;
 
 public class WebSiteHelper {
     private static final String ID = "id";

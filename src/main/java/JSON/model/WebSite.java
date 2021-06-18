@@ -1,4 +1,4 @@
-package JSON;
+package JSON.model;
 
 import java.util.ArrayList;
 import java.util.List;
