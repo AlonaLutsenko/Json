@@ -6,8 +6,10 @@ public class Book {
     private String author;
     private String bookTitle;
 
-    public void Book() {}
-    public Book(JsonObject booksJson){
+    public Book() {
+    }
+
+    public Book(JsonObject booksJson) {
         this.author = booksJson.get("author").toString();
         this.bookTitle = booksJson.get("bookTitle").toString();
     }
@@ -32,7 +34,5 @@ public class Book {
     public void setBookTitle(String bookTitle) {
         this.bookTitle = bookTitle;
     }
-
-    public boolean isBookValid(String author, String title);
 
 }

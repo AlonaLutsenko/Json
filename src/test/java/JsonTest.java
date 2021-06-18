@@ -12,7 +12,7 @@ public class JsonTest {
 //        jsonObject = null;
 //    }
 //
-    @Test
+//    @Test
 //    public void positiveTest() {
 //        Object actual1 = jsonObject.get("websites");
 //        Assert.assertNotNull("This object should not be null", actual1);
