@@ -8,6 +8,6 @@ public class ApplicationMain {
         WebSiteHelper service = new WebSiteHelper();
 
         service.loadWebSites(filePath);
-//        service.printAll();
+        service.printAll();
     }
 }
