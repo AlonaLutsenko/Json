@@ -9,12 +9,6 @@ import java.util.Map;
 
 public class JsonTest {
     WebSite webSite;
-    //    JsonHelper jsonObject;
-//    WebSiteHelper webSiteHelper;
-//
-//    public void after() {
-//        jsonObject = null;
-//    }
 
     @Test
     public void test() {
@@ -25,13 +19,5 @@ public class JsonTest {
         Book actual = webSite.getBooks().get(1);
         Assert.assertTrue(expected.equals((actual)), "Message");
     }
-//    @Test
-//    public void positiveTest() {
-//        Assert.assertTrue(webSiteHelper.isBookExist("Test1", "Pascal"), "Book is exist");
-//    }
-//
-//    @Test
-//    public void objectIsPresentTest() throws Exception {
-//        Assert.assertNotNull(JsonHelper.makeJsonObject("src/main/java/JSON/resourse/Json.json").getAsJsonObject());
-//    }
+
 }
