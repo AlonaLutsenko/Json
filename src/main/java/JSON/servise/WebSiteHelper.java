@@ -71,14 +71,9 @@ public class WebSiteHelper {
         return book;
     }
 
-    public Boolean isBookExist(String author, String title) {
+    public Boolean isBookExist(String author, String title) throws Exception{
         for(WebSite site: webSites){
-            Boolean existBook = null;
-            try {
-                existBook = site.isBookExist(author, title);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+            Boolean existBook = site.isBookExist(author, title);
             if(existBook){
                 return Boolean.TRUE;
             }
