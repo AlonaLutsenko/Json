@@ -71,15 +71,6 @@ public class WebSiteHelper {
         return book;
     }
 
-    public void printAll(){
-        for(WebSite site: webSites){
-            System.out.println(site.getName() + " - " + site.getId());
-            for(Book book: site.getBooks()){
-                System.out.println(book.getBookTitle() + " - " + book.getAuthor());
-            }
-        }
-    }
-
     public Boolean isBookExist(String author, String title) {
         for(WebSite site: webSites){
             Boolean existBook = null;
