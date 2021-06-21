@@ -20,7 +20,11 @@ public class WebSiteHelper {
     private static final String TITLE = "bookTitle";
     private static final String WEB_SITES = "websites";
 
-    private List<WebSite> sites;
+    private List<WebSite> webSites;
+
+    public List<WebSite> getWebSites() {
+        return webSites;
+    }
 
     public List<WebSite> loadWebSites(String filePath) throws Exception {
         JsonObject resource = getJsonResource(filePath);
@@ -34,7 +38,7 @@ public class WebSiteHelper {
                 response.add(webSite);
             }
         }
-        this.sites = response;
+        this.webSites = response;
         return response;
     }
 
@@ -57,7 +61,6 @@ public class WebSiteHelper {
             Book book = makeBook(item.getAsJsonObject());
             books.add(book);
         }
-
         return books;
     }
 
@@ -69,7 +72,7 @@ public class WebSiteHelper {
     }
 
     public void printAll(){
-        for(WebSite site: sites){
+        for(WebSite site: webSites){
             System.out.println(site.getName() + " - " + site.getId());
             for(Book book: site.getBooks()){
                 System.out.println(book.getBookTitle() + " - " + book.getAuthor());
@@ -78,7 +81,7 @@ public class WebSiteHelper {
     }
 
     public Boolean isBookExist(String author, String title) {
-        for(WebSite site: sites){
+        for(WebSite site: webSites){
             Boolean existBook = null;
             try {
                 existBook = site.isBookExist(author, title);

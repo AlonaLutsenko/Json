@@ -72,4 +72,8 @@ public class WebSite {
     private Boolean equals(String first, String second){
         return first.equalsIgnoreCase(second);
     }
+
+    public WebSite getValue() {
+        return null;
+    }
 }
