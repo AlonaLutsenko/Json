@@ -22,7 +22,7 @@ public class WebSiteHelper {
 
     private List<WebSite> sites;
 
-    public List<WebSite> loadWebSites(String filePath) throws Exception {
+    public void loadWebSites(String filePath) throws Exception {
         JsonObject resource = getJsonResource(filePath);
         JsonArray websites = getArray(resource, WEB_SITES);
         List<WebSite> response = new ArrayList<>();
@@ -35,7 +35,7 @@ public class WebSiteHelper {
             }
         }
         this.sites = response;
-        return response;
+//        return response;
     }
 
     private JsonObject getJsonResource(String filePath) throws Exception{
@@ -79,15 +79,15 @@ public class WebSiteHelper {
         System.out.println("----------------------------------------------------");
     }
 
-    public Boolean isBookExist(String author, String title) throws Exception{
-        for(WebSite site: sites){
-            Boolean existBook = site.isBookExist(author, title);
-            if(existBook){
-                return Boolean.TRUE;
-            }
-        }
-        return Boolean.FALSE;
-    }
+//    public Boolean isBookExist(String author, String title) throws Exception{
+//        for(WebSite site: sites){
+//            Boolean existBook = site.isBookExist(author, title);
+//            if(existBook){
+//                return Boolean.TRUE;
+//            }
+//        }
+//        return Boolean.FALSE;
+//    }
 
     public List<WebSite> getWebSites() {
         return sites;
