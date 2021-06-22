@@ -23,15 +23,15 @@ public class JsonHelper {
         }
     }
 
-    public static String getValue(JsonObject object, String property) {
+    public static String getValue(JsonObject object, String property){
         return object.get(property).getAsString();
     }
 
-    public static Integer getIntValue(JsonObject object, String property) {
+    public static Integer getIntValue(JsonObject object, String property){
         return object.get(property).getAsInt();
     }
 
-    public static JsonArray getArray(JsonObject object, String property) {
+    public static JsonArray getArray(JsonObject object, String property){
         return object.get(property).getAsJsonArray();
     }
 }
