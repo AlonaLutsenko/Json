@@ -40,12 +40,4 @@ public class Book {
             return true;
         else return false;
     }
-
-
-    @Override
-    public int hashCode() {
-        int result = author.hashCode();
-        result = 37 * result + bookTitle.hashCode();
-        return result;
-    }
 }
