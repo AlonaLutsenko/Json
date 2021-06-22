@@ -1,18 +1,15 @@
 import JSON.model.Book;
-import JSON.model.WebSite;
-import JSON.servise.WebSiteHelper;
+import JSON.servise.WebSiteResource;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import java.util.List;
-
 public class JsonTest {
-    WebSiteHelper sites;
+    WebSiteResource sites;
 
     @BeforeClass
     public void checkParser() {
-        sites = new WebSiteHelper();
+        sites = new WebSiteResource();
         sites.loadWebSites("src/main/java/JSON/resourse/Json.json");
     }
 

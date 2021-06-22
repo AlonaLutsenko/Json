@@ -6,14 +6,12 @@ import JSON.model.WebSite;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-
 import static JSON.util.JsonHelper.*;
 
-public class WebSiteHelper {
+public class WebSiteResource {
     private static final String ID = "id";
     private static final String BOOKS = "books";
     private static final String AUTHOR = "author";
@@ -61,7 +59,6 @@ public class WebSiteHelper {
             Book book = makeBook(item.getAsJsonObject());
             books.add(book);
         }
-
         return books;
     }
 
