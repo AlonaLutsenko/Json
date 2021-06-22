@@ -1,23 +1,30 @@
 import JSON.model.Book;
 import JSON.model.WebSite;
 import JSON.servise.WebSiteHelper;
+import JSON.util.JsonHelper;
 import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 public class JsonTest {
-    WebSite webSite;
+    WebSiteHelper webSites;
+//    @BeforeClass
+//    public void checkParser() throws Exception {
+//        webSites = JsonHelper.makeJsonObject("src/main/java/JSON/resourse/Json.json");
+//    }
 
     @Test
     public void test() {
-        Book expected = new Book("Test1", "Pascal");
-        WebSiteHelper webSiteHelper = null;
-        List<WebSite> book = webSiteHelper.getWebSites();
-        WebSite webSites = book.get(0).getValue();
-        Book actual = webSite.getBooks().get(1);
-        Assert.assertTrue(expected.equals((actual)), "Message");
+        WebSite another = new WebSite();
+        List<Book> books = new ArrayList<Book>();
+        books.add(new Book("Test1", "Pascal"));
+        books.add(new Book("Test3", "Python"));
+        another.setId(1);
+        another.setBooks(books);
+        Assert.assertFalse(webSites.getWebSites().get(0).getValue().equals(another));
     }
 
 }
