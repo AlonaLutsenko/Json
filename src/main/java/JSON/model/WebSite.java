@@ -49,24 +49,6 @@ public class WebSite {
         this.books.add(book);
     }
 
-    //    public boolean isBookExist(String author, String title) throws Exception {
-//        if (author == null) {
-//            throw new Exception("Invalid author");
-//        }
-//        if (title == null) {
-//            throw new Exception("Invalid title");
-//        }
-//
-//        for (Book book : this.books) {
-//            Boolean existAuthor = equals(author, book.getAuthor());
-//            Boolean existTitle = equals(title, book.getBookTitle());
-//            if (existAuthor && existTitle) {
-//                return Boolean.TRUE;
-//            }
-//        }
-//
-//        return Boolean.FALSE;
-//    }
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

@@ -6,14 +6,12 @@ import JSON.model.WebSite;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-
 import static JSON.util.JsonHelper.*;
 
-public class WebSiteHelper {
+public class WebSiteResource {
     private static final String ID = "id";
     private static final String BOOKS = "books";
     private static final String AUTHOR = "author";
@@ -35,7 +33,6 @@ public class WebSiteHelper {
             }
         }
         this.sites = response;
-//        return response;
     }
 
     private JsonObject getJsonResource(String filePath) throws Exception{
@@ -57,7 +54,6 @@ public class WebSiteHelper {
             Book book = makeBook(item.getAsJsonObject());
             books.add(book);
         }
-
         return books;
     }
 
@@ -67,27 +63,6 @@ public class WebSiteHelper {
         book.setBookTitle(getValue(object, TITLE));
         return book;
     }
-
-    public void printAll(){
-        System.out.println("----------------------------------------------------");
-        for(WebSite site: sites){
-            System.out.println("Site: "+ site.getId() + " - " + site.getName());
-            for(Book book: site.getBooks()){
-                System.out.println(" Book: " + book.getAuthor() + " - " + book.getBookTitle());
-            }
-        }
-        System.out.println("----------------------------------------------------");
-    }
-
-//    public Boolean isBookExist(String author, String title) throws Exception{
-//        for(WebSite site: sites){
-//            Boolean existBook = site.isBookExist(author, title);
-//            if(existBook){
-//                return Boolean.TRUE;
-//            }
-//        }
-//        return Boolean.FALSE;
-//    }
 
     public List<WebSite> getWebSites() {
         return sites;

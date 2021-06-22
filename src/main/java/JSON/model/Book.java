@@ -41,7 +41,6 @@ public class Book {
         else return false;
     }
 
-
     @Override
     public int hashCode() {
         int result = author.hashCode();
